@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Legacy Receipt Helper",
+  "version": "1.0",
+  "description": "Amazon領収書ページでlegacy版リンクを表示する",
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.co.jp/gp/css/summary/*", "https://www.amazon.co.jp/gp/css/order-history*"],
+      "js": ["content.js"]
+    }
+  ]
+}
