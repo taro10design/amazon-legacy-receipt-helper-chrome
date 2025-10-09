@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "\\1legacy/\\2"
+      }
+    },
+    "condition": {
+      "regexFilter": "^(https://www\\.amazon\\.co\\.jp/gp/)(css/summary/print\\.html.*)",
+      "resourceTypes": [
+        "xmlhttprequest",
+        "main_frame"
+      ]
+    }
+  }
+]

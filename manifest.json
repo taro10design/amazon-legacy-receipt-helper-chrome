@@ -1,12 +1,21 @@
 {
   "manifest_version": 3,
-  "name": "Amazon Legacy Receipt Helper",
+  "name": "Legacy領収書リダイレクター",
   "version": "1.0",
-  "description": "Amazon領収書ページでlegacy版リンクを表示する",
-  "content_scripts": [
-    {
-      "matches": ["https://www.amazon.co.jp/gp/css/summary/*", "https://www.amazon.co.jp/gp/css/order-history*"],
-      "js": ["content.js"]
-    }
-  ]
+  "description": "Amazonの領収書ページを自動的にレガシー版に変換します。",
+  "permissions": [
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "*://www.amazon.co.jp/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
 }
